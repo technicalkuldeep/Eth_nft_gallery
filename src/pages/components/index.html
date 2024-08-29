@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Image</title>
+</head>
+<body>
+
+    <div id="avatar-container">
+        <!-- Avatar Image will be inserted here -->
+    </div>
+
+    <script>
+        // Sample JSON data
+        const jsonData = {
+            "avatar": "https://example.com/path/to/avatar.png"
+        };
+
+        // Parse the JSON to get the avatar URL
+        const avatarUrl = jsonData.avatar;
+
+        // Create an image tag
+        const imgTag = document.createElement('img');
+        imgTag.src = avatarUrl;
+        imgTag.alt = "User Avatar";
+
+        // Insert the image tag into the DOM
+        document.getElementById('avatar-container').appendChild(imgTag);
+    </script>
+
+    <div class="flex space-x-4 items-center p-4">
+        <input
+            type="text"
+            placeholder="Add your wallet address"
+            class="p-2 w-64 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 transition-colors"
+        />
+
+        <input
+            type="text"
+            placeholder="Add the collection address"
+            class="p-2 w-64 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 transition-colors"
+        />
+
+        <button class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+            Fetch for Collection
+        </button>
+
+        <button class="p-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
+            Let's go
+        </button>
+    </div>
+
+</body>
+</html>

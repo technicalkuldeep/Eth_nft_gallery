@@ -1,0 +1,110 @@
+/* Global Variables */
+:root {
+  --bg-light: #f8fafc;
+  --text-light: #1f2937;
+  --bg-dark: #111827;
+  --text-dark: #f3f4f6;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  padding: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card p {
+  margin-top: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Input and Button Styles */
+input, button {
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-right: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode for Inputs and Buttons */
+body.dark input, body.dark button {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: var(--text-dark);
+}
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Mode Card Styles */
+body.dark .card {
+  background-color: #1f2937;
+  color: #f3f4f6; /* Make the text color brighter */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Mode Text for Cards */
+body.dark .card p {
+  color: #f3f4f6; /* Ensuring text inside cards is visible */
+}
